@@ -1,0 +1,51 @@
+CREATE DATABASE KeySpace;
+USE KeySpace;
+-- Tabela de usuários
+CREATE TABLE users (
+    user_id INT PRIMARY KEY AUTO_INCREMENT,
+    username VARCHAR(255) NOT NULL,
+    password_hash VARCHAR(255) NOT NULL,
+    email varchar (255) NOT NULL,
+    registration_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Tabela de partidas
+CREATE TABLE matches (
+    match_id INT PRIMARY KEY AUTO_INCREMENT,
+    user_id INT,
+    score INT,
+    match_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(user_id)
+);
+
+-- Tabela de ligas
+CREATE TABLE leagues (
+    league_id INT PRIMARY KEY AUTO_INCREMENT,
+    league_name VARCHAR(255) NOT NULL,
+    creator_user_id INT,
+    league_password VARCHAR(255) NOT NULL,
+    creation_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (creator_user_id) REFERENCES users(user_id)
+);
+
+-- Tabela de associação entre usuários e ligas (muitos para muitos)
+CREATE TABLE user_league (
+    user_id INT,
+    league_id INT,
+    PRIMARY KEY (user_id, league_id),
+    FOREIGN KEY (user_id) REFERENCES users(user_id),
+    FOREIGN KEY (league_id) REFERENCES leagues(league_id)
+);
+
+-- Tabela de pontuações em ligas
+CREATE TABLE league_scores (
+    league_id INT,
+    user_id INT,
+    total_score INT,
+    weekly_score INT,
+    creation_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (league_id) REFERENCES leagues(league_id),
+    FOREIGN KEY (user_id) REFERENCES users(user_id)
+);
+INSERT INTO leagues (league_name, creator_user_id, league_password)
+VALUES ("Geral", 1, "Geral");
