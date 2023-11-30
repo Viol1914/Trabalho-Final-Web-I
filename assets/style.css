@@ -1,0 +1,74 @@
+@import url('https://fonts.cdnfonts.com/css/arcade-classic');
+
+
+/* GERAL */
+html {
+    background-image: url("../assets/images/fundo.svg");
+    font-family: 'ArcadeClassic', sans-serif;
+    color: aliceblue;
+}
+
+button {
+    font-family: 'ArcadeClassic', sans-serif;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #F4F4F4;
+}
+::-webkit-scrollbar {
+    width: 6px;
+    background: #F4F4F4;
+}
+::-webkit-scrollbar-thumb {
+    background: #dad7d7;
+}
+:root {
+    --borda: 10px;
+    --verde: #75F081;
+    --rosa: #E960D8
+}
+
+.container {
+    border: solid 1px var(--verde);
+    border-radius: var(--borda);
+    background-color: #000;
+}
+
+.content {
+    position: relative;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: center;
+}
+
+.content h1 {
+    font-size: 100px;
+    margin: 0;
+    color: var(--rosa);
+    text-shadow: 5px 5px 0px var(--verde);
+    letter-spacing: 10px;
+}
+
+.content h2 {
+    font-size: 60px;
+    text-align: center;
+    margin: 0;
+    color: var(--rosa);
+    text-shadow: 5px 5px 0px var(--verde);
+    letter-spacing: 10px;
+}
+
+.btn {
+    background-color: #75F081;
+    border: none;
+    border-radius: var(--borda);
+    padding: 10px;
+}
+.buttons {
+    margin-top: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
