@@ -11,7 +11,8 @@ body {
     max-width: 100%;
     overflow: hidden;
 }
-a{
+
+a {
     text-decoration: none;
     color: black;
 }
@@ -24,7 +25,7 @@ footer {
     position: fixed;
 }
 
-button{
+button {
     font-family: 'ArcadeClassic', sans-serif;
 }
 
@@ -43,8 +44,8 @@ button{
 }
 
 .container {
-    border: solid 1px #75F081; 
-    border-radius: 10px; 
+    border: solid 1px #75F081;
+    border-radius: 10px;
     background-color: #000;
     display: flex;
     width: 100%;
@@ -71,8 +72,9 @@ button{
     font-size: 60px;
     text-align: center;
     margin: 0;
-    color: #E960D8; 
-    text-shadow: 5px 5px 0px #75F081; 
+    padding: 40px;
+    color: #E960D8;
+    text-shadow: 5px 5px 0px #75F081;
     letter-spacing: 10px;
 }
 
@@ -80,7 +82,7 @@ button{
 .btn {
     background-color: #75F081;
     border: none;
-    border-radius: 10px; 
+    border-radius: 10px;
     padding: 10px;
     width: 2.5%;
 }
@@ -116,9 +118,11 @@ button{
     display: flex;
     flex-direction: column;
 }
-.rankList{
+
+.rankList {
     margin-top: 0;
 }
+
 .rankList ul {
     list-style: none;
     padding: 0;
@@ -139,27 +143,28 @@ button{
 .rankList li button:hover {
     background-color: #45a049;
 }
+
 /* esquerda */
 .contentleftuser {
     display: flex;
     flex-direction: column;
 }
 
-.imguser img {
-    margin-top: 10%;
-    border-radius: 50%;
-    max-width: 50%;
+#avatar img {
+    width: 200px;
 }
 
-#mudarimguser {
-    padding: 2%;
-    background-color: #E960D8;
-    border-radius: 40px;
-    font-size: 20px;
-    border: none;
-    margin: 5px;
+.solo img {
+    width: 300px;
+    margin-top: -50px;
 }
 
-#mudarimguser:hover {
-    transform: scale(1.2);
+.imgbtn {
+    margin: 20px;
+    width: 100px;
+    transition: transform .2s;
+}
+
+.imgbtn:hover {
+    transform: scale(1.1);
 }

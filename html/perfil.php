@@ -12,21 +12,20 @@ require "php/force_authenticate.php"
 </head>
 
 <body>
-    <div class="btn"><a href="home.php"> Home
+    <a href="home.php"><img class="imgbtn" src="../assets/images/Home.svg"></a>
         </a>
     </div>
     <div class="content" id="userpage">
         <section class="contentleftuser">
+            <!-- NOME -->
             <div>
                 <h2>Meu Perfil</h2>
-                <span id="nomeuser">User:</span>
             </div>
-            <div class="foto">
-                <div class="imguser">
-                    <img src="../assets/images/icon.png" alt="Icon do User">
-                </div>
-                <button id="mudarimguser" class="btnuser" type="button">Alterar imagem</button>
-            </div>
+            <!-- FOTO -->
+        <div>
+            <div id="avatar"><img src="../assets/images/avatares/Avatar2.svg"></div>
+            <div class="solo"><img src="../assets/images/solo.svg"></div>
+        </div>
         </section>
 
 
